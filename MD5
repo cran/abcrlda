@@ -1,0 +1,16 @@
+b74721f15d3714087d5744e0854d0896 *DESCRIPTION
+39d005825e02cd1f7e27167b66abb4ec *NAMESPACE
+8c6e938abb1e7bc18e5576ebec3e7565 *R/abc_grid.R
+90adfd974584e2b32676d7a4447cfbc5 *R/abcrlda.R
+aa4607a204a6308e800186c33c79efad *inst/abcrlda_1.0.1.pdf
+02ab7f77157c42617d2653a1082a77ab *inst/examples/example_abcrlda.R
+1def4607ab68e0fbb1626f72a947406c *inst/examples/example_cross.R
+21f8c0106036aed300806fab47260c15 *inst/examples/example_grid.R
+94290fda55d22dc0ead97daa306d83f5 *inst/examples/example_risk.R
+b67e0604d61f86b393e4ab96b0cf7704 *inst/examples/example_risk_calculate.R
+71b8e7de65460a0cd750def7e5d21a33 *man/abcrlda.Rd
+7859e51fff9dae9dee4e639b7488e9f6 *man/cross_validation.Rd
+fcb44dd58b3ebac8fb6dddb31cdd8520 *man/da_risk_estimator.Rd
+e434feaa09982cb6c61ecad16cd7ac25 *man/grid_search.Rd
+f0d521eb2b4a17e049e1862c1c2615f4 *man/predict.abcrlda.Rd
+c96ace3bab4b54183b79b32c0acbd145 *man/risk_calculate.Rd
