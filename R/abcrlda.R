@@ -116,6 +116,9 @@ abcrlda <- function(x, y, gamma=1, cost=c(0.5, 0.5), bias_correction=TRUE){
                         cost = cost,
                         ncost = c(cost[1] / sum(cost), cost[2] / sum(cost)),
                         gamma = gamma,
+                        D = D,
+                        G0 = G0,
+                        G1 = G1,
                         Ghat0 = Ghat0,
                         Ghat1 = Ghat1,
                         Dhat = Dhat,
@@ -154,8 +157,10 @@ predict.abcrlda <- function(object, newx, ...){
   newx <- as.matrix(newx, drop = FALSE)
   pred <- as.numeric(newx %*% object$a + object$m <= 0) + 1
   cl <- object$lev[pred]
-  # cl <- factor(cl, levels=1:k, labels=object$lev)
-  return(as.factor(cl))
+  cl <- factor(cl, levels=object$lev)
+  # cl <- as.factor(cl)
+  # levels(cl) <- object$lev
+  return(cl)
 }
 
 
@@ -180,6 +185,9 @@ predict.abcrlda <- function(object, newx, ...){
 risk_calculate <- function(object, x_true, y_true){
   if (!is.factor(y_true))
     y_true <- as.factor(y_true)
+
+  if (!all(levels(y_true) == object$lev))
+    stop("object and y_true have different levels")
 
   test0 <- x_true[y_true == object$lev[1], ]
   test1 <- x_true[y_true == object$lev[2], ]

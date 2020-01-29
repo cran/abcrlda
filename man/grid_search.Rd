@@ -4,8 +4,15 @@
 \alias{grid_search}
 \title{Grid Search}
 \usage{
-grid_search(x, y, range_gamma, range_cost, method = "estimator",
-  nfolds = 10, bias_correction = TRUE)
+grid_search(
+  x,
+  y,
+  range_gamma,
+  range_cost,
+  method = "estimator",
+  nfolds = 10,
+  bias_correction = TRUE
+)
 }
 \arguments{
 \item{x}{Input matrix or data.frame of dimension \code{nobs x nvars}; each row is an feature vector.}
@@ -91,10 +98,11 @@ model <- abcrlda(train_data, train_label,
 predict(model, train_data)
 }
 \seealso{
-Other functions in the package: \code{\link{abcrlda}},
-  \code{\link{cross_validation}},
-  \code{\link{da_risk_estimator}},
-  \code{\link{predict.abcrlda}},
-  \code{\link{risk_calculate}}
+Other functions in the package: 
+\code{\link{abcrlda}()},
+\code{\link{cross_validation}()},
+\code{\link{da_risk_estimator}()},
+\code{\link{predict.abcrlda}()},
+\code{\link{risk_calculate}()}
 }
 \concept{functions in the package}

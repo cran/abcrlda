@@ -4,10 +4,16 @@
 \alias{da_risk_estimator}
 \title{Double Asymptotic Risk Estimator}
 \usage{
-da_risk_estimator(object)
+da_risk_estimator(object, bias_correction = TRUE)
 }
 \arguments{
 \item{object}{An object of class "abcrlda".}
+
+\item{bias_correction}{Takes in a boolean value.
+If \code{bias_correction} is TRUE, then asymptotic bias correction will be performed.
+Otherwise, (if \code{bias_correction} is FALSE) asymptotic bias correction will not be performed and
+the ABCRLDA is the classical RLDA.
+The default is TRUE.}
 }
 \value{
 Calculates risk based on estimated class error rates and misclassification costs
@@ -35,9 +41,11 @@ model <- abcrlda(train_data, train_label, gamma = 0.5, cost = 0.75)
 da_risk_estimator(model)
 }
 \seealso{
-Other functions in the package: \code{\link{abcrlda}},
-  \code{\link{cross_validation}},
-  \code{\link{grid_search}}, \code{\link{predict.abcrlda}},
-  \code{\link{risk_calculate}}
+Other functions in the package: 
+\code{\link{abcrlda}()},
+\code{\link{cross_validation}()},
+\code{\link{grid_search}()},
+\code{\link{predict.abcrlda}()},
+\code{\link{risk_calculate}()}
 }
 \concept{functions in the package}
