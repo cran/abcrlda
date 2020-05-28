@@ -4,16 +4,10 @@
 \alias{da_risk_estimator}
 \title{Double Asymptotic Risk Estimator}
 \usage{
-da_risk_estimator(object, bias_correction = TRUE)
+da_risk_estimator(object)
 }
 \arguments{
 \item{object}{An object of class "abcrlda".}
-
-\item{bias_correction}{Takes in a boolean value.
-If \code{bias_correction} is TRUE, then asymptotic bias correction will be performed.
-Otherwise, (if \code{bias_correction} is FALSE) asymptotic bias correction will not be performed and
-the ABCRLDA is the classical RLDA.
-The default is TRUE.}
 }
 \value{
 Calculates risk based on estimated class error rates and misclassification costs
@@ -28,7 +22,7 @@ This function implements the generalized (double asymptotic) consistent estimato
   "Asymptotically Bias-Corrected Regularized Linear Discriminant Analysis for Cost-Sensitive
   Binary Classification," in IEEE Signal Processing Letters, vol. 26, no. 9, pp. 1300-1304,
   Sept. 2019. doi: 10.1109/LSP.2019.2918485
-  URL: \url{http://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=8720003&isnumber=8770167}
+  URL: \url{https://ieeexplore.ieee.org/document/8720003}
 }
 
 \examples{
